@@ -6,12 +6,10 @@ generator client {
 }
 
 datasource db {
-    provider = "sqlite"
+    provider = "postgresql"
     url      = env("DATABASE_URL")
 }
 
-model Project {
+model Example {
     id String @id @default(cuid())
-    Description String
-    Hours Decimal
 }
